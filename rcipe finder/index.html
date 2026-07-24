@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Recipe Finder</title>
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-orange-500 shadow-md">
+        <div class="max-w-6xl mx-auto p-5">
+
+            <h1 class="text-3xl text-white font-bold text-center">
+                🍔 Recipe Finder
+            </h1>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-6">
+
+        <!-- Search -->
+
+        <div class="flex gap-3">
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Search recipe..."
+                class="flex-1 border rounded-lg p-3 outline-none focus:ring-2 focus:ring-orange-500">
+
+            <button
+                id="searchBtn"
+                class="bg-orange-500 text-white px-6 rounded-lg hover:bg-orange-600 transition">
+
+                Search
+
+            </button>
+            <button
+                id="clearBtn"
+                class="bg-orange-500 text-white px-6 rounded-lg hover:bg-orange-600 transition">
+
+                Clear
+
+            </button>
+
+        </div>
+
+        
+        <p id="resultCount" class="mt-6 text-gray-700 font-semibold">
+    Found 0 recipes
+        </p>
+
+        <!-- Recipes -->
+
+        <div
+            id="recipes"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+
+        </div>
+
+    </main>
+
+   
+
+
+    <!-- Recipe Modal -->
+<div
+    id="recipeModal"
+    class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50 p-4 overflow-y-auto">
+
+    <!-- Modal Box -->
+    <div class="bg-white w-full max-w-3xl rounded-xl shadow-2xl max-h-[90vh] overflow-y-auto">
+
+        <!-- Header -->
+        <div class="flex justify-between items-center p-5 border-b">
+
+            <h2
+                id="modalTitle"
+                class="text-2xl font-bold text-gray-800">
+
+                Recipe Title
+
+            </h2>
+
+            <button
+                id="closeModal"
+                class="text-3xl text-gray-500 hover:text-red-500 transition">
+
+                
+
+            </button>
+
+        </div>
+
+        <!-- Body -->
+        <div class="p-6 space-y-5">
+            <h2 id="modalTitle"></h2>
+            <!-- Image -->
+            <img
+                id="modalImage"
+                src=""
+                alt=""
+                class="w-full h-72 object-cover rounded-lg">
+
+            <!-- Category & Area -->
+            <div class="flex justify-between">
+
+                <span
+                    id="modalCategory"
+                    class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full">
+
+                    Category
+
+                </span>
+
+                <span
+                    id="modalArea"
+                    class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full">
+
+                    Area
+
+                </span>
+
+            </div>
+
+            <!-- Ingredients -->
+            <div>
+
+                <h3 class="text-xl font-semibold mb-2">
+                    Ingredients
+                </h3>
+
+                <ul
+                    id="ingredientsList"
+                    class="list-disc pl-5 space-y-1">
+
+                </ul>
+
+            </div>
+
+            <!-- Instructions -->
+            <div>
+
+                <h3 class="text-xl font-semibold mb-2">
+                    Instructions
+                </h3>
+
+                <p
+                    id="modalInstructions"
+                    class="text-gray-700 leading-7">
+
+                </p>
+
+            </div>
+
+            <!-- Youtube -->
+            <a
+                id="youtubeLink"
+                href="#"
+                target="_blank"
+                class="block text-center bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition">
+
+                ▶ Watch on YouTube
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+ <script src="script.js"></script>
+</body>
+</html>
